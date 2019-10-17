@@ -23,10 +23,10 @@ public class Myhttpurlconnection {
 
         String myphplink = "http://localhost:10080/java/myhttpurlconnect.php?firstname="+firstname+"&lastname="+lastname;
         URL url = new URL(myphplink);
-        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-        conn.setRequestMethod("GET");
+        HttpURLConnection connect = (HttpURLConnection)url.openConnection();
+        connect.setRequestMethod("GET");
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(connect.getInputStream()));
         StringBuilder sb = new StringBuilder();
         String line;
 
